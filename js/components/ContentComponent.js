@@ -23,6 +23,7 @@ export default {
       aboutPage: null, // Menyimpan data halaman "About"
       apiKey: "AIzaSyC0NYs0vzrlklopzeDMW2mZvWTJ3z-y5iE",
       blogId: "2531488134356491737",
+      
     };
   },
   methods: {
