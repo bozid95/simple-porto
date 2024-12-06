@@ -122,10 +122,8 @@ export default {
  
         <div v-else class="post-detail">
           <a href="#" @click="backToBlogList">Back to Blog List</a>
-          <div class="about">
           <h2>{{ selectedPost.title }}</h2>
           <div v-html="selectedPost.content"></div>
-        </div>
         </div>
       </div>
  

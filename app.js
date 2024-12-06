@@ -20,13 +20,24 @@ const app = createApp({
   },
   methods: {
     toggleDarkMode() {
-      this.darkMode = !this.darkMode;
-      if (this.darkMode) {
-        document.body.classList.add("dark-mode");
+      this.darkMode = !this.darkMode; // Change darkMode status
+    },
+  },
+  watch: {
+    // Watcher for darkMode
+    darkMode(newVal) {
+      if (newVal) {
+        document.body.classList.add("dark-mode"); // Add dark mode class
       } else {
-        document.body.classList.remove("dark-mode");
+        document.body.classList.remove("dark-mode"); // Remove dark mode class
       }
     },
+  },
+  mounted() {
+    // Automatically enable dark mode when the app is mounted
+    if (this.darkMode) {
+      document.body.classList.add("dark-mode");
+    }
   },
 });
 

@@ -25,10 +25,11 @@ nav {
 }
 
 nav a {
-  color: #007acc; /* Biru pastel lembut */
+  color: #000000; /* Biru pastel lembut */
   margin: 0 10px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: bold;
   transition: color 0.3s ease;
 }
 
@@ -67,7 +68,25 @@ footer {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+.container a {
+  color: #007acc; /* Warna link untuk light mode */
+  text-decoration: none;
+}
+
+.container a:hover {
+  color: #005f99; /* Warna saat hover di light mode */
+}
+
 /* Dark Mode */
+body.dark-mode .container a {
+  color: #4da3d1; /* Warna link yang lebih cerah di dark mode */
+  text-decoration: none;
+}
+
+body.dark-mode .container a:hover {
+  color: #f8f8f8; /* Warna link hover di dark mode */
+}
+
 body.dark-mode {
   background-color: #121212; /* Latar belakang gelap yang nyaman */
   color: #e0e0e0; /* Warna teks yang lembut */
@@ -136,8 +155,9 @@ body.dark-mode .post-detail {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan agar navbar lebih jelas */
   }
   nav a {
-    margin: 5px 10px;
-    font-size: 14px; /* Menyesuaikan ukuran font pada tampilan mobile */
+    margin: 5px 5px;
+    font-size: 16px; /* Menyesuaikan ukuran font pada tampilan mobile */
+    font-weight: bold;
   }
   .dark-mode-floating-toggle {
     bottom: 15px;
@@ -145,7 +165,7 @@ body.dark-mode .post-detail {
     font-size: 14px;
     padding: 8px 16px;
   }
-  
+
   /* Gambar Responsif */
   img {
     max-width: 100%;
