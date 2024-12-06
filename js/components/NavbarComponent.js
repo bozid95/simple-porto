@@ -1,5 +1,21 @@
 export default {
-    template: `
+  data() {
+    return {
+      isDarkMode: false, // Status Dark Mode
+    };
+  },
+  methods: {
+    toggleDarkMode() {
+      this.isDarkMode = !this.isDarkMode; // Toggle Dark Mode
+      if (this.isDarkMode) {
+        document.body.classList.add("dark-mode");
+      } else {
+        document.body.classList.remove("dark-mode");
+      }
+    },
+  },
+  template: `
+    <div>
       <nav>
         <div>
           <a href="#" @click.prevent="$emit('navigate', 'about')">About</a>
@@ -8,6 +24,11 @@ export default {
           <a href="#" @click.prevent="$emit('navigate', 'blog')">Blog</a>
         </div>
       </nav>
-    `
-  };
-  
+      <button 
+        class="dark-mode-floating-toggle" 
+        @click="toggleDarkMode">
+        {{ isDarkMode ? '☀' : '🌙' }}
+      </button>
+    </div>
+  `,
+};
