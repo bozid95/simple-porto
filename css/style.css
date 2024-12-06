@@ -125,14 +125,14 @@ body.dark-mode .post-detail {
 /* Dark Mode Floating Button */
 .dark-mode-floating-toggle {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 15px;
+  right: 15px;
   z-index: 1000;
-  padding: 10px 20px;
+  padding: 10px 15px;
   background-color: #007acc;
   color: white;
   border: none;
-  border-radius: 25px;
+  border-radius: 50px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
@@ -145,6 +145,25 @@ body.dark-mode .post-detail {
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 70px; /* Tempatkan sedikit di atas tombol dark mode */
+  right: 15px;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  z-index: 1100; /* Pastikan lebih tinggi dari dark mode button */
+}
+
+.scroll-to-top-button:hover {
+  background-color: #005f99;
+}
 /* Responsiveness */
 @media (max-width: 768px) {
   nav {
@@ -164,8 +183,9 @@ body.dark-mode .post-detail {
   .dark-mode-floating-toggle {
     bottom: 15px;
     right: 15px;
-    font-size: 14px;
-    padding: 8px 16px;
+    font-size: 16px;
+    padding: 10px 15px;
+    
   }
 
   /* Gambar Responsif */
@@ -173,26 +193,4 @@ body.dark-mode .post-detail {
     max-width: 100%;
     height: auto;
   }
-
-  .scroll-to-top-button {
-    position: fixed;
-    bottom: 70px; /* Tempatkan sedikit di atas tombol dark mode */
-    right: 20px;
-    background-color: #007acc;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    padding: 10px 15px;
-    font-size: 20px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-    z-index: 1100; /* Pastikan lebih tinggi dari dark mode button */
-  }
-  
-  .scroll-to-top-button:hover {
-    background-color: #005f99;
-  }
-  
-  
 }
