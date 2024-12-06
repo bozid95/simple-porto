@@ -20,11 +20,10 @@ export default {
     return {
       blogPosts: [],
       selectedPost: null,
-      aboutPage: null, 
+      aboutPage: null,
       certificatesPage: null,
       apiKey: "AIzaSyC0NYs0vzrlklopzeDMW2mZvWTJ3z-y5iE",
       blogId: "2531488134356491737",
-      
     };
   },
   methods: {
@@ -49,7 +48,7 @@ export default {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
-        
+
         const data = await response.json();
 
         // Menyimpan detail halaman "About"
@@ -71,7 +70,7 @@ export default {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
-        
+
         const data = await response.json();
 
         // Menyimpan detail halaman "Certificates"
@@ -136,7 +135,7 @@ export default {
         </div>
       </div>
             <div v-if="currentView === 'certificates'">
-        <div class="certificates">
+        <div class="about">
           <div v-html="certificatesPage?.content || '<p>Loading content...</p>'"></div>
         </div>
       </div>
@@ -150,4 +149,3 @@ export default {
     </div>
   `,
 };
-
