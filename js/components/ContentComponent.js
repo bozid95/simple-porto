@@ -20,7 +20,8 @@ export default {
     return {
       blogPosts: [],
       selectedPost: null,
-      aboutPage: null, // Menyimpan data halaman "About"
+      aboutPage: null, 
+      certificatesPage: null,
       apiKey: "AIzaSyC0NYs0vzrlklopzeDMW2mZvWTJ3z-y5iE",
       blogId: "2531488134356491737",
       
@@ -63,6 +64,28 @@ export default {
         console.error("Error fetching about page:", error);
       }
     },
+    async fetchCertificates() {
+      const apiUrl = `https://www.googleapis.com/blogger/v3/blogs/${this.blogId}/pages/3651892132507865260?key=${this.apiKey}`;
+      try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        
+        const data = await response.json();
+
+        // Menyimpan detail halaman "Certificates"
+        this.certificatesPage = {
+          id: data.id,
+          title: data.title,
+          content: data.content,
+        };
+
+        console.log("About page loaded:", this.certificatesPage);
+      } catch (error) {
+        console.error("Error fetching about page:", error);
+      }
+    },
     async viewPost(postId) {
       this.selectedPost = this.blogPosts.find((post) => post.id === postId);
     },
@@ -74,6 +97,9 @@ export default {
     currentView(newView) {
       if (newView === "about" && !this.aboutPage) {
         this.fetchAbout(); // Muat konten "About" saat view berubah ke "about"
+      }
+      if (newView === "certificates" && !this.certificatesPage) {
+        this.fetchCertificates(); // Muat konten "Certificates" saat view berubah ke "certificates"
       }
     },
   },
@@ -107,6 +133,11 @@ export default {
       <div v-if="currentView === 'about'">
         <div class="about">
           <div v-html="aboutPage?.content || '<p>Loading content...</p>'"></div>
+        </div>
+      </div>
+            <div v-if="currentView === 'certificates'">
+        <div class="certificates">
+          <div v-html="certificatesPage?.content || '<p>Loading content...</p>'"></div>
         </div>
       </div>
  
