@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Vue.js</title>
+    <title>Wedoo.dev</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -11,9 +11,9 @@
     <div id="app">
       <header-component></header-component>
       <navbar-component @navigate="currentView = $event"></navbar-component>
-
       <content-component :current-view="currentView"></content-component>
       <footer-component></footer-component>
+      <bottom-navbar-component></bottom-navbar-component>
     </div>
 
     <script type="module" src="app.js"></script>

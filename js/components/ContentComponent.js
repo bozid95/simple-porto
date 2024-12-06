@@ -138,7 +138,7 @@ export default {
         </div>
       </div>
  
-      <div v-if="currentView === 'portfolio'">
+      <div v-if="currentView === 'projects'">
         <div class="portfolio-item">
           <h4>Project A</h4>
           <p>Description of Project A</p>
