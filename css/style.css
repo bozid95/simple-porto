@@ -1,13 +1,11 @@
 /* Default (Light Mode) Styles */
 body {
-  overflow-x: hidden;
-  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
-  background-color: #ffffff;
-  color: #1a1a1a;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+  background-size: 200% 200%;
+  background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+
 }
 
 /* Navigasi */
@@ -90,12 +88,13 @@ body.dark-mode .container a:hover {
 }
 
 body.dark-mode {
-  background-color: #121212; /* Latar belakang gelap yang nyaman */
+  background-color: #000000; /* Latar belakang gelap yang nyaman */
   color: #e0e0e0; /* Warna teks yang lembut */
+  background-size: 20px 20px;
 }
 
 body.dark-mode nav {
-  background-color: #1f1f1f;
+  background-color: #000000;
   border-bottom: 1px solid #333333;
 }
 
@@ -108,7 +107,7 @@ body.dark-mode nav a:hover {
 }
 
 body.dark-mode footer {
-  background-color: #1f1f1f;
+  background-color: #000000;
   color: #888888;
   border-top: 1px solid #333333;
 }
@@ -116,7 +115,7 @@ body.dark-mode footer {
 body.dark-mode .about,
 body.dark-mode .portfolio-item,
 body.dark-mode .post-detail {
-  background-color: #1e1e1e; /* Warna abu gelap */
+  background-color: rgba(0, 0, 0, 0.384);
   color: #e0e0e0;
   border: 1px solid #333333;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -185,7 +184,6 @@ body.dark-mode .post-detail {
     right: 15px;
     font-size: 16px;
     padding: 10px 15px;
-    
   }
 
   /* Gambar Responsif */
