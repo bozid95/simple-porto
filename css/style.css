@@ -96,7 +96,7 @@ body.dark-mode {
 
   /* Latar belakang dengan gradien bulat di pojok kanan atas */
   background-image: 
-    radial-gradient(circle at top right, rgba(51, 4, 51, 0.719), rgba(0, 0, 0, 0.301) 50%);
+    radial-gradient(circle at top right, rgba(15, 17, 134, 0.473), rgba(0, 0, 0, 0.301) 50%);
 
   /* Pola atau latar belakang lain dapat ditambahkan di bawah gradien jika diperlukan */
   background-repeat: no-repeat;
