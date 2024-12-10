@@ -1,11 +1,11 @@
 /* Default (Light Mode) Styles */
-body {
+html, body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
-  background-size: 200% 200%;
-  background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-
+  height: 100%; /* Pastikan elemen body dan html memiliki tinggi penuh */
+  width: 100%; /* Pastikan elemen body dan html memiliki lebar penuh */
+  font-family: 'Roboto', sans-serif; /* Atur font default */
+  background-size: 200% 200%; /* Latar belakang dapat diskalakan */
 }
 
 /* Navigasi */
@@ -63,7 +63,7 @@ footer {
   border-radius: 8px;
   margin: 15px 0;
   padding: 20px;
-  background-color: #ffffff;
+  background-color: #ffffff3d;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -88,13 +88,24 @@ body.dark-mode .container a:hover {
 }
 
 body.dark-mode {
-  background-color: #000000; /* Latar belakang gelap yang nyaman */
-  color: #e0e0e0; /* Warna teks yang lembut */
-  background-size: 20px 20px;
+  /* Warna dasar latar belakang */
+  background-color: #000000;
+
+  /* Warna teks lembut */
+  color: #e0e0e0;
+
+  /* Latar belakang dengan gradien bulat di pojok kanan atas */
+  background-image: 
+    radial-gradient(circle at top right, rgba(51, 4, 51, 0.719), rgba(0, 0, 0, 0.301) 50%);
+
+  /* Pola atau latar belakang lain dapat ditambahkan di bawah gradien jika diperlukan */
+  background-repeat: no-repeat;
+  background-size: 100%; /* Pastikan gradien tidak dipotong */
 }
 
+
 body.dark-mode nav {
-  background-color: #000000;
+  background-color: #0a0a0a00;
   border-bottom: 1px solid #333333;
 }
 
@@ -103,21 +114,21 @@ body.dark-mode nav a {
 }
 
 body.dark-mode nav a:hover {
-  color: #4da3d1; /* Biru sedikit lebih gelap saat hover */
+  color: #126ea0; /* Biru sedikit lebih gelap saat hover */
 }
 
 body.dark-mode footer {
   background-color: #000000;
   color: #888888;
-  border-top: 1px solid #333333;
+  border-top: 1px solid #3333335e;
 }
 
 body.dark-mode .about,
 body.dark-mode .portfolio-item,
 body.dark-mode .post-detail {
-  background-color: rgba(0, 0, 0, 0.384);
+  background-color: rgba(0, 0, 0, 0.062);
   color: #e0e0e0;
-  border: 1px solid #333333;
+  border: 1px solid #d4d1d10c;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
